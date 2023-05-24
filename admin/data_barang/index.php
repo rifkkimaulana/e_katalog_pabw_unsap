@@ -71,12 +71,14 @@
                   <th style="width: 10px">No</th>
                   <th>Nama Barang</th>
                   <th>Deskripsi</th>
+                  <th>Kategori</th>
                   <th>Harga</th>
                   <th class="text-center">Gambar</th>
                   <th class="text-center">Aksi</th>
                 </tr>
               </thead>
               <tbody>
+
                 <?php
                 include '../../koneksi.php';
                 $no = 1;
@@ -105,6 +107,7 @@
       </section>
       <!-- MAIN CONTENT -->
     </div>
+
     <footer class="main-footer">
       <strong>&copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
       All rights reserved.
@@ -115,6 +118,7 @@
     <aside class="control-sidebar control-sidebar-dark">
     </aside>
   </div>
+
   <!-- jQuery -->
   <script src="../../assets/plugins/jquery/jquery.min.js"></script>
   <!-- jQuery UI 1.11.4 -->
@@ -145,5 +149,6 @@
   <script src="../../assets/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
   <!-- AdminLTE App -->
   <script src="../../assets/dist/js/adminlte.js"></script>
+
 </body>
 </html>

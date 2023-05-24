@@ -94,10 +94,10 @@
                             <div class="form-group">
                                 <label>Pilih Gambar</label>
                                 <div class="input-group">
-                                    <div class="custom-file">
-                                        <input type="file" name="gambar_post" class="custom-file-input" required>
-                                        <label class="custom-filelabel">Pilih File Gambar</label>
-                                    </div>
+                                <div class="custom-file">
+                                    <input type="file" name="gambar_post" class="custom-file-input">
+                                    <label class="custom-file-label">Pilih File Gambar</label>
+                                </div>
                                 </div>
                             </div>
                         </div>

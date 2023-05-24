@@ -18,7 +18,6 @@ $hapus = mysqli_query($koneksi, "DELETE FROM data_barang WHERE id = '$id'");
 if($hapus) {
     // Jika berhasil, tampilkan pesan berhasil hapus data
     echo "<script>
-    alert('Data Berhasil Dihapus');
     window.location.href = 'index.php';
     </script>";
 } else {

@@ -26,7 +26,6 @@ WHERE id = '$id'");
 if($update) {
     // Jika berhasil, tampilkan pesan berhasil edit data
     echo "<script>
-    alert('Data Berhasil Diubah');
     window.location.href = 'index.php';
     </script>";
 } else {

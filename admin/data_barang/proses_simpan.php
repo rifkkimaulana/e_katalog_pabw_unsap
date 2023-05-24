@@ -26,7 +26,6 @@
     if($insert){
         //jika berhasil tampilkan pesan berhasil simpan data
         echo "<script>
-            alert('Data Berhasil Ditambahkan');
             window.location.href='index.php';
         </script>";
     }else{

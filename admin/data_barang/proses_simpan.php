@@ -5,6 +5,7 @@
     //ambil data dari form
     $nama_barang_post = $_POST['nama_barang_post'];
     $deskripsi_post = $_POST['deskripsi_post'];
+    $kategori_post = $_POST['kategori_post'];
     $harga_post = $_POST['harga_post'];
 
     //proses upload gambar
@@ -18,6 +19,7 @@
         NULL,
         '$nama_barang_post',
         '$deskripsi_post',
+        '$kategori_post',
         '$harga_post',
         '$nama_file'
     )");

@@ -78,26 +78,31 @@
                 </tr>
               </thead>
               <tbody>
-
                 <?php
                 include '../../koneksi.php';
-                $no = 1;
-                $query = mysqli_query($koneksi, "SELECT * FROM data_barang");
-                while ($data = mysqli_fetch_array($query)) {
+                  $no = 1;
+                  $result = mysqli_query($koneksi, "SELECT data_barang.*,
+                  kategori.kategori_barang
+                  FROM data_barang
+                  INNER JOIN kategori ON data_barang.id_kategori = kategori.id
+                  ORDER BY id DESC");
+                  while ($data = mysqli_fetch_array($result)) {
                   ?>
-                  <tr>
-                    <td><?= $no++; ?></td>
-                    <td><?= $data['nama_barang']; ?></td>
-                    <td><?= $data['deskripsi']; ?></td>
-                    <td><?= $data['harga']; ?></td>
-                    <td class="text-center"><img width="100" src="gambar/<?= $data['gambar']; ?>" width="100px"></td>
-                    <td class="text-center">
-                      <a href="edit.php?id=<?= $data['id']; ?>" class="btn btn-warning">Edit</a>
-                      <a href="proses_hapus.php?id=<?= $data['id']; ?>" class="btn btn-danger">Hapus</a>
-                    </td>
-                  </tr>
-                <?php } ?>
+                    <tr>
+                      <td><?= $no++; ?></td>
+                      <td><?= $data['nama_barang']; ?></td>
+                      <td><?= $data['deskripsi']; ?></td>
+                      <td><?= $data['kategori_barang']; ?></td>
+                      <td><?= $data['harga']; ?></td>
+                      <td class="text-center"><img width="100" src="gambar/<?= $data['gambar']; ?>" width="100px"></td>
+                      <td class="text-center">
+                        <a href="edit.php?id=<?= $data['id']; ?>" class="btn btn-warning">Edit</a>
+                        <a href="proses_hapus.php?id=<?= $data['id']; ?>" class="btn btn-danger">Hapus</a>
+                      </td>
+                    </tr>
+                  <?php } ?>
               </tbody>
+
             </table>
           </div>
           <!-- /.card-body -->

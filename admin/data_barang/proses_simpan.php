@@ -22,14 +22,11 @@
         '$nama_file'
     )");
 
-    //cek apakah proses simpan ke database berhasil
     if($insert){
-        //jika berhasil tampilkan pesan berhasil simpan data
         echo "<script>
             window.location.href='index.php';
         </script>";
     }else{
-        //jika gagal tampilkan pesan gagal simpan data
         echo "<script>
             alert('Data Gagal Ditambahkan');
             window.location.href='index.php';

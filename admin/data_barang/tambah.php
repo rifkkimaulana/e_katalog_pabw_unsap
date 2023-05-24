@@ -76,6 +76,18 @@
                 <label>Deskripsi</label>
                 <textarea name="deskripsi_post" class="form-control" rows="3" required></textarea>
               </div>
+              <?php
+              $kategori = mysqli_query($mysqli, "SELECT * FROM tb_kategori ORDER BY id DESC");
+              ?>
+              <div class="form-group">
+                  <label for="content_artikel">Kategori</label>
+                  <select class="form-control" name="kategori" required>
+                      <option value="">Pilih Kategori</option>
+                      <?php while ($data = mysqli_fetch_array($kategori)) { ?>
+                          <option value="<?= $data['id'] ?>"><?= $data['nama_kategori'] ?></option>
+                      <?php } ?>
+                  </select>
+              </div>
               <div class="form-group">
                 <label>Harga</label>
                 <input type="text" name="harga_post" class="form-control" placeholder="Masukkan Harga Barang" required>
@@ -100,6 +112,7 @@
       </section>
       <!-- MAIN CONTENT -->
     </div>
+
     <footer class="main-footer">
       <strong>&copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
       All rights reserved.
@@ -109,6 +122,7 @@
     </footer>
     <aside class="control-sidebar control-sidebar-dark">
     </aside>
+
   </div>
   <!-- jQuery -->
   <script src="../../assets/plugins/jquery/jquery.min.js"></script>

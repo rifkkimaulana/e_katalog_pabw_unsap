@@ -22,14 +22,11 @@ harga = '$harga_post',
 gambar = '$nama_file'
 WHERE id = '$id'");
 
-// Cek apakah proses edit ke database berhasil
 if($update) {
-    // Jika berhasil, tampilkan pesan berhasil edit data
     echo "<script>
     window.location.href = 'index.php';
     </script>";
 } else {
-    // Jika gagal, tampilkan pesan gagal edit data
     echo "<script>
     alert('Data Gagal Diubah');
     window.location.href = 'index.php';

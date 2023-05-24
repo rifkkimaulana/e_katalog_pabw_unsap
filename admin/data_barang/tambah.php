@@ -77,14 +77,15 @@
                 <textarea name="deskripsi_post" class="form-control" rows="3" required></textarea>
               </div>
               <?php
-              $kategori = mysqli_query($mysqli, "SELECT * FROM tb_kategori ORDER BY id DESC");
+              include '../../koneksi.php';
+              $kategori = mysqli_query($koneksi, "SELECT * FROM kategori ORDER BY id DESC");
               ?>
               <div class="form-group">
                   <label for="content_artikel">Kategori</label>
                   <select class="form-control" name="kategori" required>
                       <option value="">Pilih Kategori</option>
                       <?php while ($data = mysqli_fetch_array($kategori)) { ?>
-                          <option value="<?= $data['id'] ?>"><?= $data['nama_kategori'] ?></option>
+                          <option value="<?= $data['id'] ?>"><?= $data['kategori_barang'] ?></option>
                       <?php } ?>
                   </select>
               </div>

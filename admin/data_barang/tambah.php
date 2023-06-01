@@ -76,6 +76,10 @@
                 <label>Deskripsi</label>
                 <textarea name="deskripsi_post" class="form-control" rows="3" required></textarea>
               </div>
+              <div class="form-group">
+                <label>Harga</label>
+                <input type="text" name="harga_post" class="form-control" placeholder="Masukkan Harga Barang" required>
+              </div>
               <?php
               include '../../koneksi.php';
               $kategori = mysqli_query($koneksi, "SELECT * FROM kategori ORDER BY id DESC");
@@ -88,10 +92,6 @@
                           <option value="<?= $data['id'] ?>" > <?= $data['kategori_barang'] ?></option>
                       <?php } ?>
                   </select>
-              </div>
-              <div class="form-group">
-                <label>Harga</label>
-                <input type="text" name="harga_post" class="form-control" placeholder="Masukkan Harga Barang" required>
               </div>
               <div class="form-group">
                 <label>Pilih Gambar</label>

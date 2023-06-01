@@ -94,14 +94,15 @@
 
                             <div class="form-group">
                                 <label>Kategori</label>
+                                
                                 <select class="form-control" name="kategori_post" required>
-                                    <option value="">Pilih Kategori</option>
                                     <?php
                                     include '../../koneksi.php';
-                                    $kategori = mysqli_query($koneksi, "SELECT * FROM kategori ORDER BY id DESC");
-                                    while ($data = mysqli_fetch_array($kategori)) { ?>
-                                        <option value="<?= $data['id'] ?>" 
-                                        <?php if ($data['id'] == $kategori) { ?> <?= 'selected' ?> <?php } ?> > <?= $data['kategori_barang'] ?></option>
+                                    $kategori = mysqli_query($koneksi, "SELECT * FROM kategori");
+                                    while ($data = mysqli_fetch_array($kategori)) {
+                                        ?>
+                                        <option value="<?= $data['id'] ?>"><?= $data['kategori_barang'] ?>
+                                        </option>
                                     <?php } ?>
                                 </select>
                             </div>

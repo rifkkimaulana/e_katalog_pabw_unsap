@@ -18,8 +18,8 @@
     $insert = mysqli_query($koneksi, "INSERT INTO data_barang VALUES (
         NULL,
         '$nama_barang_post',
-        '$deskripsi_post',
         '$kategori_post',
+        '$deskripsi_post',
         '$harga_post',
         '$nama_file'
     )");

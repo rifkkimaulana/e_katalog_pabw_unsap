@@ -91,17 +91,17 @@
                                 <label>Harga</label>
                                 <input type="text" name="harga_post" class="form-control" placeholder="Masukkan Harga Barang" value="<?= $harga ?>" required>
                             </div>
-                            <?php
-                            include '../../koneksi.php';
-                            $kategori = mysqli_query($koneksi, "SELECT * FROM kategori ORDER BY id DESC");
-                            ?>
+
                             <div class="form-group">
-                                <label for="content_artikel">Kategori</label>
+                                <label>Kategori</label>
                                 <select class="form-control" name="kategori_post" required>
                                     <option value="">Pilih Kategori</option>
-
-                                    <?php while ($data = mysqli_fetch_array($kategori)) { ?>
-                                        <option value="<?= $data['id'] ?>" > <?= $data['kategori_barang'] ?></option>
+                                    <?php
+                                    include '../../koneksi.php';
+                                    $kategori = mysqli_query($koneksi, "SELECT * FROM kategori ORDER BY id DESC");
+                                    while ($data = mysqli_fetch_array($kategori)) { ?>
+                                        <option value="<?= $data['id'] ?>" 
+                                        <?php if ($data['id'] == $kategori) { ?> <?= 'selected' ?> <?php } ?> > <?= $data['kategori_barang'] ?></option>
                                     <?php } ?>
                                 </select>
                             </div>

@@ -71,8 +71,8 @@
                   <th style="width: 10px">No</th>
                   <th>Nama Barang</th>
                   <th>Deskripsi</th>
-                  <th>Kategori</th>
                   <th>Harga</th>
+                  <th>Kategori</th>
                   <th class="text-center">Gambar</th>
                   <th class="text-center">Aksi</th>
                 </tr>
@@ -92,8 +92,8 @@
                       <td><?= $no++; ?></td>
                       <td><?= $data['nama_barang']; ?></td>
                       <td><?= $data['deskripsi']; ?></td>
-                      <td><?= $data['kategori_barang']; ?></td>
                       <td><?= $data['harga']; ?></td>
+                      <td><?= $data['kategori_barang']; ?></td>
                       <td class="text-center"><img width="100" src="gambar/<?= $data['gambar']; ?>" width="100px"></td>
                       <td class="text-center">
                         <a href="edit.php?id=<?= $data['id']; ?>" class="btn btn-warning">Edit</a>

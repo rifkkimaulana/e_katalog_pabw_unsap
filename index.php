@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-  
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>E-Katalog</title>
@@ -13,11 +12,10 @@
   <link rel="stylesheet" href="assets_front/css/slimbox2.css" type="text/css" media="screen" />
   <script type="text/JavaScript" src="assets_front/js/slimbox2.js"></script>
 </head>
-
 <body>
   <div id="templatemo_wrapper">
     <div id="templatemo_header">
-      <img width="950" src="assets_front/images/slider.jpg" alt="Slider" />
+      <img width="950" src="assets_front/images/slider/05.jpg" alt="Slider" />
       <div class="clear"></div>
     </div> <!-- END of header -->
     <div id="templatemo_main">

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 24, 2023 at 11:20 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Waktu pembuatan: 03 Jun 2023 pada 16.57
+-- Versi server: 10.4.28-MariaDB
+-- Versi PHP: 8.0.28
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `data_barang`
+-- Struktur dari tabel `data_barang`
 --
 
 CREATE TABLE `data_barang` (
@@ -34,71 +34,68 @@ CREATE TABLE `data_barang` (
   `deskripsi` text NOT NULL,
   `harga` double NOT NULL,
   `gambar` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `data_barang`
+-- Dumping data untuk tabel `data_barang`
 --
 
 INSERT INTO `data_barang` (`id`, `nama_barang`, `id_kategori`, `deskripsi`, `harga`, `gambar`) VALUES
-(13, 'KURUPUK', 5, 'kurupuk', 20000, 'Koala.jpg'),
-(14, 'asd', 0, '', 12000, 'Desert.jpg'),
-(15, 'asd', 0, '', 12000, 'Desert.jpg'),
-(16, 'asd', 0, '', 12000, 'Desert.jpg'),
-(17, 'asd', 0, '', 12000, 'Lighthouse.jpg'),
-(18, 'asd', 0, '6', 20000, 'Desert.jpg'),
-(19, 'asd', 0, '6', 20000, 'Desert.jpg');
+(24, 'PAKET BUAH', 7, 'PAKET BUAH-BUAHAN', 50000, 'paketbuah.jpg'),
+(25, 'BUAH MANGGA', 8, 'Ini adalah buah mangga', 5000, 'mangga.jpeg'),
+(26, 'PEPAYA', 8, 'Ini adalah pepaya', 7000, 'pepaya.jpeg'),
+(27, 'SAWO 1Kg', 8, 'Ini adalah buah sawo', 10000, 'sawo.jpeg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
   `id` int(11) NOT NULL,
   `kategori_barang` varchar(150) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id`, `kategori_barang`) VALUES
-(5, 'Kategori data'),
-(6, 'kategori 2');
+(7, 'PAKET BUAH BUAHAN'),
+(8, 'BUAH SATUAN');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `data_barang`
+-- Indeks untuk tabel `data_barang`
 --
 ALTER TABLE `data_barang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `data_barang`
+-- AUTO_INCREMENT untuk tabel `data_barang`
 --
 ALTER TABLE `data_barang`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

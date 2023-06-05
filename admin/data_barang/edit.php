@@ -1,23 +1,25 @@
 <?php
-    //load koneksi database
-    include '../../koneksi.php';
-    //ambil id dari URL
-    $id = $_GET['id'];
-    //ambil data dari database
-    $query = mysqli_query($koneksi, "SELECT * FROM data_barang WHERE id = '$id'");
-    $data = mysqli_fetch_array($query);
-    $nama_barang = $data['nama_barang'];
-    $deskripsi = $data['deskripsi'];
-    $harga = $data['harga'];
+//load koneksi database
+include '../../koneksi.php';
+//ambil id dari URL
+$id = $_GET['id'];
+//ambil data dari database
+$query = mysqli_query($koneksi, "SELECT * FROM data_barang WHERE id = '$id'");
+$data = mysqli_fetch_array($query);
+$nama_barang = $data['nama_barang'];
+$deskripsi = $data['deskripsi'];
+$harga = $data['harga'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Edit Data Barang</title>
     <!-- Google Font: Source Sans Pro -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="../../assets/plugins/fontawesome-free/css/all.min.css">
     <!-- Ionicons -->
@@ -37,10 +39,12 @@
     <!-- summernote -->
     <link rel="stylesheet" href="../../assets/plugins/summernote/summernote-bs4.min.css">
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         <div class="preloader flex-column justify-content-center align-items-center">
-            <img class="animation__shake" src="../../assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+            <img class="animation__shake" src="../../assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
+                width="60">
         </div>
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
             <ul class="navbar-nav">
@@ -81,20 +85,23 @@
                             <input type="hidden" name="id" value="<?= $id ?>">
                             <div class="form-group">
                                 <label>Nama Barang</label>
-                                <input type="text" name="nama_barang_post" class="form-control" placeholder="Masukkan Nama Barang" value="<?= $nama_barang ?>" required>
+                                <input type="text" name="nama_barang_post" class="form-control"
+                                    placeholder="Masukkan Nama Barang" value="<?= $nama_barang ?>" required>
                             </div>
                             <div class="form-group">
                                 <label>Deskripsi</label>
-                                <textarea name="deskripsi_post" class="form-control" rows="3" required><?= $deskripsi ?></textarea>
+                                <textarea name="deskripsi_post" class="form-control" rows="3"
+                                    required><?= $deskripsi ?></textarea>
                             </div>
                             <div class="form-group">
                                 <label>Harga</label>
-                                <input type="text" name="harga_post" class="form-control" placeholder="Masukkan Harga Barang" value="<?= $harga ?>" required>
+                                <input type="text" name="harga_post" class="form-control"
+                                    placeholder="Masukkan Harga Barang" value="<?= $harga ?>" required>
                             </div>
 
                             <div class="form-group">
                                 <label>Kategori</label>
-                                
+
                                 <select class="form-control" name="kategori_post" required>
                                     <?php
                                     include '../../koneksi.php';
@@ -109,10 +116,10 @@
                             <div class="form-group">
                                 <label>Pilih Gambar</label>
                                 <div class="input-group">
-                                <div class="custom-file">
-                                    <input type="file" name="gambar_post" class="custom-file-input">
-                                    <label class="custom-file-label">Pilih File Gambar</label>
-                                </div>
+                                    <div class="custom-file">
+                                        <input type="file" name="gambar_post" class="custom-file-input">
+                                        <label class="custom-file-label">Pilih File Gambar</label>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -168,4 +175,5 @@
     <!-- AdminLTE App -->
     <script src="../../assets/dist/js/adminlte.js"></script>
 </body>
+
 </html>

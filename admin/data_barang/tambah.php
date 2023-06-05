@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tambah Data Barang</title>
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../assets/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -30,7 +31,8 @@
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
     <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="../../assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+      <img class="animation__shake" src="../../assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
+        width="60">
     </div>
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
       <ul class="navbar-nav">
@@ -70,7 +72,8 @@
             <div class="card-body">
               <div class="form-group">
                 <label>Nama Barang</label>
-                <input type="text" name="nama_barang_post" class="form-control" placeholder="Masukkan Nama Barang" required>
+                <input type="text" name="nama_barang_post" class="form-control" placeholder="Masukkan Nama Barang"
+                  required>
               </div>
               <div class="form-group">
                 <label>Deskripsi</label>
@@ -85,13 +88,13 @@
               $kategori = mysqli_query($koneksi, "SELECT * FROM kategori ORDER BY id DESC");
               ?>
               <div class="form-group">
-                  <label for="content_artikel">Kategori</label>
-                  <select class="form-control" name="kategori_post" required>
-                      <option value="">Pilih Kategori</option>
-                      <?php while ($data = mysqli_fetch_array($kategori)) { ?>
-                          <option value="<?= $data['id'] ?>" > <?= $data['kategori_barang'] ?></option>
-                      <?php } ?>
-                  </select>
+                <label for="content_artikel">Kategori</label>
+                <select class="form-control" name="kategori_post" required>
+                  <option value="">Pilih Kategori</option>
+                  <?php while ($data = mysqli_fetch_array($kategori)) { ?>
+                    <option value="<?= $data['id'] ?>"> <?= $data['kategori_barang'] ?></option>
+                  <?php } ?>
+                </select>
               </div>
               <div class="form-group">
                 <label>Pilih Gambar</label>

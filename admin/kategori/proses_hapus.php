@@ -5,7 +5,7 @@ $id = $_GET['id'];
 
 $hapus = mysqli_query($koneksi, "DELETE FROM kategori WHERE id = '$id'");
 
-if($hapus) {
+if ($hapus) {
     echo "<script>
     window.location.href = 'index.php';
     </script>";

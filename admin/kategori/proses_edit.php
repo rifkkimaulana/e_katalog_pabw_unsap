@@ -8,7 +8,7 @@ $update = mysqli_query($koneksi, "UPDATE kategori SET
 kategori_barang = '$kategori_barang'
 WHERE id = '$id'");
 
-if($update) {
+if ($update) {
     echo "<script>
     window.location.href = 'index.php';
     </script>";

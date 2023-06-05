@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Data Barang</title>
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../../assets/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -25,10 +27,12 @@
   <!-- summernote -->
   <link rel="stylesheet" href="../../assets/plugins/summernote/summernote-bs4.min.css">
 </head>
+
 <body class="hold-transition sidebar-mini layout-fixed">
   <div class="wrapper">
     <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="../../assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+      <img class="animation__shake" src="../../assets/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60"
+        width="60">
     </div>
     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
       <ul class="navbar-nav">
@@ -80,27 +84,37 @@
               <tbody>
                 <?php
                 include '../../koneksi.php';
-                  $no = 1;
-                  $result = mysqli_query($koneksi, "SELECT data_barang.*,
+                $no = 1;
+                $result = mysqli_query($koneksi, "SELECT data_barang.*,
                   kategori.kategori_barang
                   FROM data_barang
                   INNER JOIN kategori ON data_barang.id_kategori = kategori.id
                   ORDER BY id DESC");
-                  while ($data = mysqli_fetch_array($result)) {
+                while ($data = mysqli_fetch_array($result)) {
                   ?>
-                    <tr>
-                      <td><?= $no++; ?></td>
-                      <td><?= $data['nama_barang']; ?></td>
-                      <td><?= $data['deskripsi']; ?></td>
-                      <td><?= $data['harga']; ?></td>
-                      <td><?= $data['kategori_barang']; ?></td>
-                      <td class="text-center"><img width="100" src="gambar/<?= $data['gambar']; ?>" width="100px"></td>
-                      <td class="text-center">
-                        <a href="edit.php?id=<?= $data['id']; ?>" class="btn btn-warning">Edit</a>
-                        <a href="proses_hapus.php?id=<?= $data['id']; ?>" class="btn btn-danger">Hapus</a>
-                      </td>
-                    </tr>
-                  <?php } ?>
+                  <tr>
+                    <td>
+                      <?= $no++; ?>
+                    </td>
+                    <td>
+                      <?= $data['nama_barang']; ?>
+                    </td>
+                    <td>
+                      <?= $data['deskripsi']; ?>
+                    </td>
+                    <td>
+                      <?= $data['harga']; ?>
+                    </td>
+                    <td>
+                      <?= $data['kategori_barang']; ?>
+                    </td>
+                    <td class="text-center"><img width="100" src="gambar/<?= $data['gambar']; ?>" width="100px"></td>
+                    <td class="text-center">
+                      <a href="edit.php?id=<?= $data['id']; ?>" class="btn btn-warning">Edit</a>
+                      <a href="proses_hapus.php?id=<?= $data['id']; ?>" class="btn btn-danger">Hapus</a>
+                    </td>
+                  </tr>
+                <?php } ?>
               </tbody>
 
             </table>
@@ -156,4 +170,5 @@
   <script src="../../assets/dist/js/adminlte.js"></script>
 
 </body>
+
 </html>

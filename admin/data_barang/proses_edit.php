@@ -13,7 +13,7 @@ $kategori_post = $_POST['kategori_post'];
 $nama_file = $_FILES['gambar_post']['name'];
 $source = $_FILES['gambar_post']['tmp_name'];
 $folder = './gambar/';
-move_uploaded_file($source, $folder.$nama_file);
+move_uploaded_file($source, $folder . $nama_file);
 
 // Update data ke database
 $update = mysqli_query($koneksi, "UPDATE data_barang SET
@@ -24,7 +24,7 @@ harga = '$harga_post',
 gambar = '$nama_file'
 WHERE id = '$id'");
 
-if($update) {
+if ($update) {
     echo "<script>
     window.location.href = 'index.php';
     </script>";

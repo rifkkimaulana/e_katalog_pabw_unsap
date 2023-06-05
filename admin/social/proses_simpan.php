@@ -1,13 +1,21 @@
 <?php
+//load koneksi database
 include '../../koneksi.php';
 
-$judul = $_POST['judul_post'];
-$isi = $_POST['isi_post'];
+//ambil data dari form
+$nama_sosial_post = $_POST['nama_social_post'];
 
-$insert = mysqli_query($koneksi, "INSERT INTO tb_about VALUES (
+//proses upload gambar
+$nama_file = $_FILES['gambar_post']['name'];
+$source = $_FILES['gambar_post']['tmp_name'];
+$folder = './gambar/';
+move_uploaded_file($source, $folder . $nama_file);
+
+//simpan data ke database
+$insert = mysqli_query($koneksi, "INSERT INTO tb_social VALUES (
         NULL,
-        '$judul',
-        '$isi'
+        '$nama_sosial_post',
+        '$nama_file'
     )");
 
 if ($insert) {

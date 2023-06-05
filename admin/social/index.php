@@ -73,7 +73,7 @@
               <thead>
                 <tr>
                   <th style="width: 10px">No</th>
-                  <th>Nama Sosmed</th>
+                  <th>Nama Sosisl</th>
                   <th>Icon</th>
                   <th class="text-center">Aksi</th>
                 </tr>
@@ -82,7 +82,7 @@
                 <?php
                 include '../../koneksi.php';
                 $no = 1;
-                $query = mysqli_query($koneksi, "SELECT * FROM tb_about");
+                $query = mysqli_query($koneksi, "SELECT * FROM tb_social");
                 while ($data = mysqli_fetch_array($query)) {
                   ?>
                   <tr>
@@ -90,10 +90,10 @@
                       <?= $no++; ?>
                     </td>
                     <td>
-                      <?= $data['judul']; ?>
+                      <?= $data['nama_sosmed']; ?>
                     </td>
                     <td>
-                      <?= $data['isi']; ?>
+                      <?= $data['icon']; ?>
                     </td>
                     <td class="text-center">
                       <a href="edit.php?id=<?= $data['id']; ?>" class="btn btn-warning">Edit</a>

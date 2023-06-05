@@ -4,10 +4,9 @@ include '../../koneksi.php';
 //ambil id dari URL
 $id = $_GET['id'];
 //ambil data dari database
-$query = mysqli_query($koneksi, "SELECT * FROM tb_about WHERE id = '$id'");
+$query = mysqli_query($koneksi, "SELECT * FROM tb_social WHERE id = '$id'");
 $data = mysqli_fetch_array($query);
-$judul = $data['judul'];
-$isi = $data['isi'];
+$nama_social = $data['nama_sosmed'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -83,14 +82,18 @@ $isi = $data['isi'];
                         <div class="card-body">
                             <input type="hidden" name="id" value="<?= $id ?>">
                             <div class="form-group">
-                                <label>About</label>
-                                <input type="text" name="judul" class="form-control" placeholder="Masukkan About"
-                                    value="<?= $judul ?>" required autofocus>
+                                <label>Nama Social</label>
+                                <input type="text" name="nama_social" class="form-control" placeholder="Masukkan Social"
+                                    value="<?= $nama_social ?>" required autofocus>
                             </div>
                             <div class="form-group">
-                                <label>Isi</label>
-                                <input type="text" name="isi" class="form-control" placeholder="Masukkan isi"
-                                    value="<?= $isi ?>" required>
+                                <label>Pilih Gambar</label>
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" name="gambar_post" class="custom-file-input">
+                                        <label class="custom-file-label">Pilih File Gambar</label>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <!-- /.card-body -->
@@ -103,14 +106,7 @@ $isi = $data['isi'];
             </section>
             <!-- MAIN CONTENT -->
         </div>
-        <footer class="main-footer">
-            <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.
-            </strong>
-            All rights reserved.
-            <div class="float-right d-none d-sm-inline-block">
-                <b>Version</b> 3.2.0
-            </div>
-        </footer>
+        <?php include '../footer.php'; ?>
         <aside class="control-sidebar control-sidebar-dark">
         </aside>
     </div>

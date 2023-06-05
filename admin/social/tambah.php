@@ -68,17 +68,21 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          <form action="proses_simpan.php" method="post">
+          <form action="proses_simpan.php" method="post" enctype="multipart/form-data">
             <div class="card-body">
               <div class="form-group">
-                <label>Judul</label>
-                <input type="text" name="judul_post" class="form-control" placeholder="Masukkan Judul About" required
-                  autofocus>
+                <label>Nama Sosial</label>
+                <input type="text" name="nama_social_post" class="form-control" placeholder="Masukkan Nama Sosial"
+                  enctype="multipart/form-data" required autofocus>
               </div>
               <div class="form-group">
-                <label>Isi</label>
-                <input type="text" name="isi_post" class="form-control" placeholder="Masukkan Isi About" required
-                  autofocus>
+                <label>Pilih Gambar</label>
+                <div class="input-group">
+                  <div class="custom-file">
+                    <input type="file" name="gambar_post" class="custom-file-input">
+                    <label class="custom-file-label">Pilih File Gambar</label>
+                  </div>
+                </div>
               </div>
             </div>
             <!-- /.card-body -->
@@ -91,13 +95,7 @@
       </section>
       <!-- MAIN CONTENT -->
     </div>
-    <footer class="main-footer">
-      <strong>&copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-      All rights reserved.
-      <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.2.0
-      </div>
-    </footer>
+    <?php include '../footer.php'; ?>
     <aside class="control-sidebar control-sidebar-dark">
     </aside>
   </div>

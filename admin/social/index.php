@@ -74,7 +74,7 @@
                 <tr>
                   <th style="width: 10px">No</th>
                   <th>Nama Sosisl</th>
-                  <th>Icon</th>
+                  <th class="text-center">Icon</th>
                   <th class="text-center">Aksi</th>
                 </tr>
               </thead>
@@ -92,9 +92,7 @@
                     <td>
                       <?= $data['nama_sosmed']; ?>
                     </td>
-                    <td>
-                      <?= $data['icon']; ?>
-                    </td>
+                    <td class="text-center"><img width="100" src="gambar/<?= $data['icon']; ?>" width="100px"></td>
                     <td class="text-center">
                       <a href="edit.php?id=<?= $data['id']; ?>" class="btn btn-warning">Edit</a>
                       <a href="proses_hapus.php?id=<?= $data['id']; ?>" class="btn btn-danger">Hapus</a>
@@ -111,13 +109,7 @@
       </section>
       <!-- MAIN CONTENT -->
     </div>
-    <footer class="main-footer">
-      <strong>&copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-      All rights reserved.
-      <div class="float-right d-none d-sm-inline-block">
-        <b>Version</b> 3.2.0
-      </div>
-    </footer>
+    <?php include '../footer.php'; ?>
     <aside class="control-sidebar control-sidebar-dark">
     </aside>
   </div>

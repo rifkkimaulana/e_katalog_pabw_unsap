@@ -25,16 +25,25 @@
           </a>
         </li>
         <li class="nav-item">
+          <a href="../Social/index.php" class="nav-link">
+            <i class="nav-icon far fa-image"></i>
+            <p>
+              Social
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
           <a href="../twitter/index.php" class="nav-link">
-            <i class="fab fa-twitter"></i>
+            <i class="nav-icon far fa-image"></i>
             <p>
               Twitter
             </p>
           </a>
         </li>
+
         <li class="nav-item">
           <a href="../about/index.php" class="nav-link">
-            <i class="fas fa-info-circle"></i>
+            <i class="nav-icon far fa-image"></i>
             <p>
               About
             </p>

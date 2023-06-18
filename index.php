@@ -47,13 +47,9 @@
       <?php } ?>
 
       <div class="clear"></div>
-
-    </div> <!-- END of main -->
+    </div>
     <?php include 'footer.php' ?>
-    <div id="templatemo_footer">
-      Copyright © 2023 E-Katalog
-    </div> <!-- END of footer -->
-  </div> <!-- END of wrapper -->
+  </div>
 </body>
 
 </html>

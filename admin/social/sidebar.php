@@ -20,7 +20,7 @@
           <a href="../kategori/index.php" class="nav-link">
             <i class="nav-icon far fa-image"></i>
             <p>
-              Kategori
+              Kategori Barang
             </p>
           </a>
         </li>

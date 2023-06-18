@@ -74,7 +74,7 @@
                 <tr>
                   <th style="width: 10px">No</th>
                   <th>Nama Sosisl</th>
-                  <th class="text-center">Icon</th>
+                  <th class="text-center">Link Sosmed</th>
                   <th class="text-center">Aksi</th>
                 </tr>
               </thead>
@@ -92,7 +92,9 @@
                     <td>
                       <?= $data['nama_sosmed']; ?>
                     </td>
-                    <td class="text-center"><img width="100" src="gambar/<?= $data['icon']; ?>" width="100px"></td>
+                    <td>
+                      <?= $data['link']; ?>
+                    </td>
                     <td class="text-center">
                       <a href="edit.php?id=<?= $data['id']; ?>" class="btn btn-warning">Edit</a>
                       <a href="proses_hapus.php?id=<?= $data['id']; ?>" class="btn btn-danger">Hapus</a>

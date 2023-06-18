@@ -73,7 +73,7 @@
               <thead>
                 <tr>
                   <th style="width: 10px">No</th>
-                  <th>kategori</th>
+                  <th>kategori Barang</th>
                   <th class="text-center">Aksi</th>
                 </tr>
               </thead>

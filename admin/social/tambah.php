@@ -77,7 +77,6 @@
                   <option value="facebook">Facebook</option>
                   <option value="twitter">Twitter</option>
                   <option value="youtube">YouTube</option>
-                  <option value="instagram">Instagram</option>
                 </select>
               </div>
               <div class="form-group">

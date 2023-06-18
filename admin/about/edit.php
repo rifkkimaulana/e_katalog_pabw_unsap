@@ -89,7 +89,7 @@ $isi = $data['isi'];
                             </div>
                             <div class="form-group">
                                 <label>Isi</label>
-                                <input type="text" name="isi" class="form-control" placeholder="Masukkan isi"
+                                <input type="text" name="isi" class="form-control resizable" placeholder="Masukkan isi"
                                     value="<?= $isi ?>" required>
                             </div>
                         </div>

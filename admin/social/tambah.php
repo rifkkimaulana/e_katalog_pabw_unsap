@@ -70,22 +70,23 @@
           <!-- form start -->
           <form action="proses_simpan.php" method="post" enctype="multipart/form-data">
             <div class="card-body">
+
               <div class="form-group">
-                <label>Nama Sosial</label>
-                <input type="text" name="nama_social_post" class="form-control" placeholder="Masukkan Nama Sosial"
-                  enctype="multipart/form-data" required autofocus>
+                <label>Sosial Media</label>
+                <select name="sosial_media" class="form-control" name="nama_social_post">
+                  <option value="facebook">Facebook</option>
+                  <option value="twitter">Twitter</option>
+                  <option value="youtube">YouTube</option>
+                  <option value="instagram">Instagram</option>
+                </select>
               </div>
               <div class="form-group">
-                <label>Pilih Gambar</label>
-                <div class="input-group">
-                  <div class="custom-file">
-                    <input type="file" name="gambar_post" class="custom-file-input">
-                    <label class="custom-file-label">Pilih File Gambar</label>
-                  </div>
-                </div>
+                <label>Link Sosmed</label>
+                <input type="text" name="link_post" class="form-control"
+                  placeholder="Masukan link sosial yang anda pilih di atas" required autofocus>
               </div>
+
             </div>
-            <!-- /.card-body -->
             <div class="card-footer">
               <button type="submit" class="btn btn-primary">Simpan</button>
               <a href="index.php" type="button" class="btn btn-default">Kembali</a>
@@ -93,7 +94,6 @@
           </form>
         </div>
       </section>
-      <!-- MAIN CONTENT -->
     </div>
     <?php include '../footer.php'; ?>
     <aside class="control-sidebar control-sidebar-dark">

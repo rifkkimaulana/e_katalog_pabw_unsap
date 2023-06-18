@@ -7,6 +7,7 @@ $id = $_GET['id'];
 $query = mysqli_query($koneksi, "SELECT * FROM tb_social WHERE id = '$id'");
 $data = mysqli_fetch_array($query);
 $nama_social = $data['nama_sosmed'];
+$link_social = $data['link'];
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,18 +83,27 @@ $nama_social = $data['nama_sosmed'];
                         <div class="card-body">
                             <input type="hidden" name="id" value="<?= $id ?>">
                             <div class="form-group">
-                                <label>Nama Social</label>
-                                <input type="text" name="nama_social" class="form-control" placeholder="Masukkan Social"
-                                    value="<?= $nama_social ?>" required autofocus>
+                                <label>Sosial Media</label>
+                                <select name="nama_social" class="form-control">
+                                    <option value="facebook" <?php if ($link_social === 'facebook')
+                                        echo 'selected'; ?>>
+                                        Facebook</option>
+                                    <option value="twitter" <?php if ($link_social === 'twitter')
+                                        echo 'selected'; ?>>
+                                        Twitter</option>
+                                    <option value="youtube" <?php if ($link_social === 'youtube')
+                                        echo 'selected'; ?>>
+                                        YouTube</option>
+                                    <option value="instagram" <?php if ($link_social === 'instagram')
+                                        echo 'selected'; ?>>
+                                        Instagram</option>
+                                </select>
                             </div>
+
                             <div class="form-group">
-                                <label>Pilih Gambar</label>
-                                <div class="input-group">
-                                    <div class="custom-file">
-                                        <input type="file" name="gambar_post" class="custom-file-input">
-                                        <label class="custom-file-label">Pilih File Gambar</label>
-                                    </div>
-                                </div>
+                                <label>Link Sosmed</label>
+                                <input type="text" name="link" class="form-control" value="<?= $link_social ?>"
+                                    placeholder="Masukan link sosial yang anda pilih di atas" required autofocus>
                             </div>
                         </div>
                         <!-- /.card-body -->

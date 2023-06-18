@@ -44,11 +44,15 @@
           </ul>
           <a href="#" class="more">Beli</a>
         </div>
+
       <?php } ?>
 
       <div class="clear"></div>
+
     </div>
+
     <?php include 'footer.php' ?>
+
   </div>
 </body>
 

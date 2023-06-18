@@ -4,24 +4,21 @@
 
   <div class="col col_3">
     <?php
-    // Menghubungkan ke file koneksi.php
     include 'koneksi.php';
 
-    // Query untuk mengambil data dari tabel tb_social
     $query = "SELECT * FROM tb_social";
     $result = mysqli_query($koneksi, $query);
 
     if (mysqli_num_rows($result) > 0) {
-      // Mengisi elemen col col_3 dengan data dari tabel tb_social
       echo "<div class='col col_3'>";
       echo "<h4>Social</h4>";
       echo "<ul class='nobullet social'>";
 
       while ($row = mysqli_fetch_assoc($result)) {
-        $icon = $row['icon'];
+        $link = $row['link'];
         $namaSosmed = $row['nama_sosmed'];
 
-        echo "<li><a href='#' class='$icon'>$namaSosmed</a></li>";
+        echo "<li><a href='$link' class='$namaSosmed'>$namaSosmed</a></li>";
       }
 
       echo "</ul>";
@@ -30,7 +27,6 @@
       echo "Data tidak ditemukan.";
     }
 
-    // Menutup koneksi database
     mysqli_close($koneksi);
     ?>
   </div>
@@ -39,7 +35,7 @@
     <?php
     include 'koneksi.php';
 
-    $query = "SELECT * FROM tb_twitter WHERE id = 1";
+    $query = "SELECT * FROM tb_twitter";
     $result = mysqli_query($koneksi, $query);
 
     if (mysqli_num_rows($result) > 0) {
@@ -61,7 +57,7 @@
   <?php
   include 'koneksi.php';
 
-  $query = "SELECT * FROM tb_about WHERE id = 1";
+  $query = "SELECT * FROM tb_about";
   $result = mysqli_query($koneksi, $query);
 
   if (mysqli_num_rows($result) > 0) {
@@ -82,5 +78,5 @@
   <div class="clear"></div>
 </div>
 <div id="templatemo_footer">
-  Copyright © 2023 E-Katalog
-</div> <!-- END of footer -->
+  Copyright © 2023 rifkkimaulana | a22100111
+</div>

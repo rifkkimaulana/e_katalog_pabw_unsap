@@ -1,20 +1,13 @@
 <?php
-// Load koneksi database
 include '../../koneksi.php';
 
-// Ambil data dari form
 $id = $_POST['id'];
 $nama_social = $_POST['nama_social'];
+$link_social = $_POST['link'];
 
-$nama_file = $_FILES['gambar_post']['name'];
-$source = $_FILES['gambar_post']['tmp_name'];
-$folder = './gambar/';
-move_uploaded_file($source, $folder . $nama_file);
-
-// Update data ke database
 $update = mysqli_query($koneksi, "UPDATE tb_social SET
 nama_sosmed = '$nama_social',
-icon = '$nama_file'
+link = '$link_social'
 WHERE id = '$id'");
 
 if ($update) {

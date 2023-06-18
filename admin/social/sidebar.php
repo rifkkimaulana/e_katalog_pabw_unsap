@@ -17,7 +17,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="index.php" class="nav-link active">
+          <a href="../kategori/index.php" class="nav-link">
             <i class="nav-icon far fa-image"></i>
             <p>
               Kategori
@@ -25,7 +25,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="../social/index.php" class="nav-link">
+          <a href="../social/index.php" class="nav-link active">
             <i class="nav-icon far fa-image"></i>
             <p>
               Social
